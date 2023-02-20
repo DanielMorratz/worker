@@ -23,8 +23,7 @@ public class FileOperations
 
         using (Process process = new Process())
         {
-            process.StartInfo.FileName = "docker";
-            process.StartInfo.Arguments = $"cp {payload} {containerID}:{payloadName}";
+            process.StartInfo.FileName = "shutdown";
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardOutput = true;
             process.Start();
